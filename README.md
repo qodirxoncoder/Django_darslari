@@ -67,7 +67,7 @@ Brauzerda oching: `http://127.0.0.1:8000`
 
 ## Django MVT arxitekturasi
 
-![Django arxitektura](django_arxitektura.svg)
+![Django arxitektura](django_arxitektura-2.svg)
 
 
 
