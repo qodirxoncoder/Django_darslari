@@ -18,7 +18,7 @@ Bu repoda Django ni o'rganish jarayonida yozilgan barcha kodlar saqlanadi. Har b
 
 ```bash
 # 1. Reponi yuklab olish
-git clone https://github.com/Qodirxon/django_darslar.git
+git clone https://github.com/Qodirxon/django_darslari.git
 cd django_darslar
 
 # 2. Virtual muhit
