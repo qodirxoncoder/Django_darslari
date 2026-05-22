@@ -63,6 +63,87 @@ Brauzerda oching: `http://127.0.0.1:8000`
 
 ---
 
+
+
+<svg width="100%" viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Django MVT arxitekturasi</title>
+<desc>Brauzerdan so'rov keladi, URL ga boradi, View ga o'tadi, Model va Template bilan ishlaydi, javob qaytadi</desc>
+
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- Brauzer (yuqori) -->
+<rect x="260" y="20" width="160" height="52" rx="8" fill="#e8e8e8" stroke="#aaa" stroke-width="1"/>
+<text x="340" y="43" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#333">Brauzer</text>
+<text x="340" y="62" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666">http://127.0.0.1:8000/</text>
+
+<!-- So'rov label + strelka -->
+<text x="368" y="93" font-family="sans-serif" font-size="11" fill="#378ADD">So'rov (request)</text>
+<line x1="340" y1="72" x2="340" y2="118" stroke="#378ADD" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- urls.py -->
+<rect x="220" y="120" width="240" height="56" rx="8" fill="#d4f5e9" stroke="#1D9E75" stroke-width="1"/>
+<text x="340" y="143" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#0F6E56">urls.py</text>
+<text x="340" y="163" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#0F6E56">Qaysi view chaqirilishini hal qiladi</text>
+
+<!-- urls -> views -->
+<text x="368" y="196" font-family="sans-serif" font-size="11" fill="#1D9E75">Yo'naltiradi</text>
+<line x1="340" y1="176" x2="340" y2="218" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- views.py -->
+<rect x="210" y="220" width="260" height="56" rx="8" fill="#ede9fd" stroke="#7F77DD" stroke-width="1"/>
+<text x="340" y="243" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#3C3489">views.py</text>
+<text x="340" y="263" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#534AB7">Asosiy mantiq shu yerda</text>
+
+<!-- views -> models -->
+<text x="48" y="298" font-family="sans-serif" font-size="11" fill="#BA7517">Ma'lumot so'raydi</text>
+<path d="M210 262 L130 262 L130 330" fill="none" stroke="#BA7517" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- views -> templates -->
+<text x="452" y="298" font-family="sans-serif" font-size="11" fill="#993C1D">HTML yuboradi</text>
+<path d="M470 262 L550 262 L550 330" fill="none" stroke="#993C1D" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- models.py -->
+<rect x="40" y="332" width="180" height="56" rx="8" fill="#fef3d4" stroke="#BA7517" stroke-width="1"/>
+<text x="130" y="355" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#633806">models.py</text>
+<text x="130" y="374" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#854F0B">Ma'lumotlar bazasi</text>
+
+<!-- templates -->
+<rect x="460" y="332" width="180" height="56" rx="8" fill="#fde8e0" stroke="#D85A30" stroke-width="1"/>
+<text x="550" y="355" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#712B13">templates/</text>
+<text x="550" y="374" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#993C1D">HTML fayllar</text>
+
+<!-- models -> views qaytadi -->
+<path d="M130 388 L130 440 L210 440" fill="none" stroke="#BA7517" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+<text x="48" y="425" font-family="sans-serif" font-size="11" fill="#BA7517">Ma'lumot</text>
+
+<!-- templates -> views qaytadi -->
+<path d="M550 388 L550 440 L470 440" fill="none" stroke="#993C1D" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+<text x="462" y="425" font-family="sans-serif" font-size="11" fill="#993C1D">Tayyor HTML</text>
+
+<!-- views javob -->
+<rect x="210" y="418" width="260" height="44" rx="8" fill="#ede9fd" stroke="#7F77DD" stroke-width="1"/>
+<text x="340" y="445" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#3C3489">views.py — javob tayyorlaydi</text>
+
+<!-- views -> brauzer -->
+<line x1="340" y1="462" x2="340" y2="510" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="368" y="488" font-family="sans-serif" font-size="11" fill="#534AB7">Javob (response)</text>
+
+<!-- Brauzer (pastki) -->
+<rect x="260" y="512" width="160" height="52" rx="8" fill="#e8e8e8" stroke="#aaa" stroke-width="1"/>
+<text x="340" y="535" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#333">Brauzer</text>
+<text x="340" y="554" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666">Sahifani ko'rsatadi</text>
+
+<!-- Izoh -->
+<text x="340" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#999">Django MVT (Model — View — Template) arxitekturasi</text>
+</svg>
+
+
+
+
 ## Litsenziya
 
 MIT — o'quv maqsadida erkin foydalaning.
